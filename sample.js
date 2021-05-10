@@ -1,14 +1,7 @@
-import { uPlace } from "./uPlace.js";
+import { uPlace } from "https://taisukef.github.io/uPlace/uPlace.js";
 
-const code = "00001B0000000003099BF424A8637FC1";
-const pos = uPlace.decode(code);
+const pos = uPlace.decode("00001B000000000309DF3925687B1D00");
 console.log(pos);
-const code2 = uPlace.encode(
-  pos.lat,
-  pos.lng,
-  pos.level,
-  pos.levelmid,
-  pos.serial,
-);
-console.log(code2);
-console.log(code2 == code);
+
+const code = uPlace.encode(35.942729, 136.198835, 8);
+console.log(code);
